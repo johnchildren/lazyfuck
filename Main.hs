@@ -67,7 +67,7 @@ eval (script, (array, None))
   | current script == Inc = pure (advance script, (update inc array, None))
   | current script == Dec = pure (advance script, (update dec array, None))
   | current script == Out =   putChar (current array)
-  >>= \_ -> pure (advance script, (array, None))
+  >> pure (advance script, (array, None))
   | current script == In = getChar
   >>= \c -> pure (advance script, (update (const c) array, None))
   | current script == JumpF = case current array of
