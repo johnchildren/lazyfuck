@@ -1,8 +1,13 @@
 module Main where
 
-import System.IO (hFlush, stdout)
+import           System.IO                                ( hFlush
+                                                          , stdout
+                                                          )
 
-import Lib (initState, initScript, runEval)
+import           Lib                                      ( initState
+                                                          , initScript
+                                                          , runEval
+                                                          )
 
 main :: IO ()
 main = do
